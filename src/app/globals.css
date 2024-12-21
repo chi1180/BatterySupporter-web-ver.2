@@ -1,21 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --main-color: #white;
+  --secondary-color: #d9d9d9;
+  --accent-color: #E00606;
+  --font-color: #000000;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  color: var(--font-color);
+  background-color: var(--main-color);
+
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  list-style: none;
+
+  overflow: hidden;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.section-link-selected {
+  position: relative;
+  opacity: 1;
 }
+
+.section-link-selected:after {
+  content: "";
+  width: 3%;
+  height: 36%;
+  background: var(--accent-color);
+  border-radius: 0 .25rem .25rem 0;
+
+  position: absolute;
+  top: calc(22% + .25rem);
+  left: 0;
+}
+
