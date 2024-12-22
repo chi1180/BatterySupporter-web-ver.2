@@ -5,14 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddae53db-81c6-49b5-95c9-fd381837d889" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/account.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/list.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/memo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/api/tasks/route.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/account.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/account.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/list.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/task-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/task-list.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +27,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -74,7 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1734740576120</updated>
       <workItem from="1734740580955" duration="6976000" />
-      <workItem from="1734829890560" duration="1095000" />
+      <workItem from="1734829890560" duration="11474000" />
     </task>
     <servers />
   </component>

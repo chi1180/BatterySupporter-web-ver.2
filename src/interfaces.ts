@@ -1,10 +1,12 @@
 /* << Components interfaces /> */
 
 
-import {ReactNode} from "react";
+import {Dispatch, ReactNode, SetStateAction} from "react";
 
 export interface sectionProps {
-  section_name: string;
+  section_name: string | undefined;
+  shared_state: taskData[] | [];
+  set_state: Dispatch<SetStateAction<taskData[]>> | Dispatch<SetStateAction<never[]>>;
 }
 
 export interface contentProps {
@@ -13,12 +15,18 @@ export interface contentProps {
 }
 
 export interface listProps {
-  icon_src: string;
+  icon: ReactNode;
   title: string;
-  inner_content: ReactNode;
+  inner_content: ReactNode | undefined;
 }
 
+export interface taskData {
+  title: string;
+  note: string;
+  ignore: boolean;
+}
 
 /* << Libs interfaces /> */
+
 
 
