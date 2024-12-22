@@ -12,6 +12,12 @@ export interface contentProps {
   inner_content: ReactNode;
 }
 
+export interface listProps {
+  icon_src: string;
+  title: string;
+  inner_content: ReactNode;
+}
+
 
 /* << Libs interfaces /> */
 

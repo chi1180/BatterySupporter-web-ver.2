@@ -1,4 +1,5 @@
 import Content from "@/components/content";
+import Account from "@/components/account";
 
 export default function Dashboard()
 {
@@ -16,7 +17,7 @@ export default function Dashboard()
               inner_content={<></>}
           /><Content
               content_title={"アカウント"}
-              inner_content={<></>}
+              inner_content={<Account />}
           />
         </div>
       </div>
