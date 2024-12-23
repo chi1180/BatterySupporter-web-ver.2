@@ -5,17 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddae53db-81c6-49b5-95c9-fd381837d889" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/memo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/api/tasks/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/classing-tasks.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/get-googletasks.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/tasks/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/tasks/route.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/account.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/account.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/list.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/task-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/task-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/about.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/about.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/account.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/account.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/content.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/dashboard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/help.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/help.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/settings.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/sidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/task-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/task-list.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,21 +50,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\CWChi\\IdeaProjects\\battery-supporter-web-ver.2\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\CWChi\\IdeaProjects\\battery-supporter-web-ver.2\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -78,7 +82,8 @@
       <option name="presentableId" value="Default" />
       <updated>1734740576120</updated>
       <workItem from="1734740580955" duration="6976000" />
-      <workItem from="1734829890560" duration="11474000" />
+      <workItem from="1734829890560" duration="11579000" />
+      <workItem from="1734957541262" duration="12585000" />
     </task>
     <servers />
   </component>

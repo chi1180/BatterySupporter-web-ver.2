@@ -1,7 +1,7 @@
 "use client"
 
 import {SignedIn, SignedOut, SignInButton, UserButton, useUser} from "@clerk/nextjs";
-import List from "@/components/list";
+import List from "@/component/list";
 
 export default function Account() {
   const user = useUser();

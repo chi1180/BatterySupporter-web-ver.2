@@ -5,8 +5,8 @@ import {Dispatch, ReactNode, SetStateAction} from "react";
 
 export interface sectionProps {
   section_name: string | undefined;
-  shared_state: taskData[] | [];
-  set_state: Dispatch<SetStateAction<taskData[]>> | Dispatch<SetStateAction<never[]>>;
+  shared_state: string;
+  set_state: Dispatch<SetStateAction<string>>;
 }
 
 export interface contentProps {
@@ -20,13 +20,15 @@ export interface listProps {
   inner_content: ReactNode | undefined;
 }
 
-export interface taskData {
-  title: string;
-  note: string;
-  ignore: boolean;
-}
 
 /* << Libs interfaces /> */
 
-
+export interface taskForm {
+  title: string;
+  notes: string;
+  due: string;
+  id: string;
+  use_battery: boolean;
+  ignore: boolean;
+}
 
