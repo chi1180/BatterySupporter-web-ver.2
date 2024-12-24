@@ -2,7 +2,7 @@ import Content from "@/components/content";
 import Account from "@/components/account";
 import {sectionProps} from "@/interfaces";
 
-export default function Dashboard({shared_state, set_state}: sectionProps)
+export default function Dashboard({shared_state}: sectionProps)
 {
   return (
       <div className={"w-full h-full flex"}>
