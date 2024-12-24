@@ -1,10 +1,10 @@
 import {sectionProps} from "@/interfaces";
 import {ReactNode} from "react";
-import Dashboard from "@/component/dashboard";
-import TaskList from "@/component/task-list";
-import Settings from "@/component/settings";
-import Help from "@/component/help";
-import About from "@/component/about";
+import Dashboard from "@/components/dashboard";
+import TaskList from "@/components/task-list";
+import Settings from "@/components/settings";
+import Help from "@/components/help";
+import About from "@/components/about";
 
 export default function Section({section_name, shared_state, set_state}: sectionProps) {
   let inner_content: ReactNode;

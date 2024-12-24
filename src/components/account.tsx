@@ -1,7 +1,7 @@
 "use client"
 
-import {SignedIn, SignedOut, SignInButton, UserButton, useUser} from "@clerk/nextjs";
-import List from "@/component/list";
+import {SignedIn, SignedOut, SignInButton, UserButton, useUser, useClerk } from "@clerk/nextjs";
+import List from "@/components/list";
 
 export default function Account() {
   const user = useUser();
@@ -11,6 +11,7 @@ export default function Account() {
   if (user.isSignedIn) {
     user_data.name = user.user.fullName || user.user.firstName || user.user.lastName || user.user.username || "";
   }
+  const { openSignIn } = useClerk();
 
   return (
       <div className={"w-full py-2"}>
@@ -25,7 +26,13 @@ export default function Account() {
         </SignedIn>
 
         <SignedOut>
-          <SignInButton />
+          <button
+              className={"w-32 h-14 rounded-md bg-secondary-color flex flex-col items-center justify-center"}
+              onClick={() => openSignIn()}
+          >
+            <p className={"text-xl"}>Sign in</p>
+            <p className={"text-xs"}>with Google</p>
+          </button>
         </SignedOut>
       </div>
   );

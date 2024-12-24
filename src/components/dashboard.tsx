@@ -1,5 +1,5 @@
-import Content from "@/component/content";
-import Account from "@/component/account";
+import Content from "@/components/content";
+import Account from "@/components/account";
 import {sectionProps} from "@/interfaces";
 
 export default function Dashboard({shared_state, set_state}: sectionProps)

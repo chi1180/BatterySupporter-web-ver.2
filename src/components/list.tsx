@@ -12,7 +12,7 @@ export default function List({icon, title, inner_content}: listProps) {
           </summary>
           <div className={"w-full"}>
             <div className={`w-11/12 ${inner_content ? "h-0.5" : ""} bg-secondary-color rounded-full`}></div>
-            <div className={"w-full p-4"}>{inner_content}</div>
+            <div className={`w-full ${inner_content ? "p-4" : ""}`}>{inner_content}</div>
           </div>
         </details>
       </div>

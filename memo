@@ -4,3 +4,5 @@
 - ignore 等々の管理のために、 fetch したデータは整形して state へ保存
 - | length の変化など見受けられれば、state へ新しいデータを整形して保存
 +- root page で state を宣言して共有 or localstorage の使用を検討
+
+- reload したらデータが飛ぶので localstorage に保存するべきである。
