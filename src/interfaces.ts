@@ -1,12 +1,10 @@
 /* << Components interfaces /> */
 
 
-import {Dispatch, ReactNode, SetStateAction} from "react";
+import {ReactNode} from "react";
 
 export interface sectionProps {
   section_name: string | undefined;
-  shared_state: string;
-  set_state: Dispatch<SetStateAction<string>>;
 }
 
 export interface contentProps {
@@ -30,5 +28,10 @@ export interface taskForm {
   id: string;
   use_battery: boolean;
   ignore: boolean;
+}
+
+export interface taskClassificationProps {
+  type: "use-battery";
+  content: string;
 }
 

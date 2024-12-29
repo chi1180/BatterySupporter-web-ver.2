@@ -5,20 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddae53db-81c6-49b5-95c9-fd381837d889" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/lib/task-classification.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memo" beforeDir="false" afterPath="$PROJECT_DIR$/memo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/about.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/account.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/account.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/content.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/help.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/help.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/list.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/settings.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/task-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/task-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/sign-in/[[...sign-in]]/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/sign-up/[[...sign-up]]/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/task-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/task-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/datas.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/datas.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +32,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/app/page.tsx" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -87,6 +87,14 @@
       <workItem from="1734996044825" duration="541000" />
       <workItem from="1734996630493" duration="174000" />
       <workItem from="1735015021926" duration="3645000" />
+      <workItem from="1735023051021" duration="4045000" />
+      <workItem from="1735349580492" duration="87000" />
+      <workItem from="1735349691594" duration="4261000" />
+      <workItem from="1735379563418" duration="2035000" />
+      <workItem from="1735433723969" duration="5884000" />
+      <workItem from="1735452636046" duration="3578000" />
+      <workItem from="1735456594381" duration="7439000" />
+      <workItem from="1735467856916" duration="1637000" />
     </task>
     <servers />
   </component>

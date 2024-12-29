@@ -1,3 +1,5 @@
+<<--- 実装中の適当メモ --->>
+
 # API と task-list section & dashboard の connection について
 
 - SWR で定期手ににデータの取得
@@ -6,3 +8,13 @@
 +- root page で state を宣言して共有 or localstorage の使用を検討
 
 - reload したらデータが飛ぶので localstorage に保存するべきである。
+
+
+
+- useSWR で定期的にデータ取ってくる（from google tasks）
+|
+- data を format （same type of data）
+- localstorage のデータとの差異を確認
+|
+- different だったら updata して
+

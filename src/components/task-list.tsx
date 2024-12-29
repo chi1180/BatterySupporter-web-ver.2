@@ -1,77 +1,74 @@
+"use client";
+
 import Content from "@/components/content";
-import {sectionProps} from "@/interfaces";
 import List from "@/components/list";
-import {Add, DoDisturb} from "@mui/icons-material";
+import {localstorage_data_names} from "@/datas";
+import {useEffect, useState} from "react";
+import {Add, Block} from "@mui/icons-material";
+import {taskForm} from "@/interfaces";
 import {IconButton} from "@mui/material";
 
-export default function TaskList({shared_state, set_state}: sectionProps)
-{
+export default function TaskList() {
+  const [task_data, setTaskData] = useState([]);
+  function updateTaskData() {
+    const storedData = localStorage.getItem(localstorage_data_names.taskData);
+    if (storedData) {
+      setTaskData(JSON.parse(storedData));
+      console.log("Rendered!");
+    }
+  }
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    updateTaskData();
+
+    const timer = setInterval(updateTaskData, 1000 * 60);  // set interval
+    return () => clearInterval(timer);  // return clean up function
+  }, []);
+
   return (
       <div className={"w-full h-full flex"}>
         <div className={"w-1/2 h-full"}>
           <Content
               content_title={"バッテリを消費するタスク"}
-              inner_content={<ol>{shared_state.length > 0 ? JSON.parse(shared_state).map((item, index) => (
-                    !item.ignore ?
+              inner_content={<ol>{task_data.map((task: taskForm) => (
+                  task.ignore ? <></> : <li key={task.id}>
                     <List
                         icon={
-                      <IconButton
-                          title={"バッテリを消費しないタスクに変更"}
-                          onClick={() => {
-                            const updata_tasks = JSON.parse(shared_state);
-                            for (const task of updata_tasks) {
-                              if (task.id === item.id) task.ignore = true;
-                            }
-                            set_state(JSON.stringify(updata_tasks));
-                          }}
-                      >
-                        {<DoDisturb/>}
-                      </IconButton>
-                    }
-                        title={item.title}
-                        inner_content={
-                          <>
-                            <p>{item.notes}</p>
-                            <p>{item.due ? `Due @ ${new Date(item.due).toLocaleDateString("en")}` : ""}</p>
-                        </>
+                          <IconButton>
+                            <Block/>
+                          </IconButton>
                         }
-                        key={`use-battery-task-${index}`}
-                    /> : <></>
-                )) : <></>}
-              </ol>}
+                        title={task.title}
+                        inner_content={<div>
+                          <p>{task.notes}</p>
+                          <p>{task.due ? "Due date: " + new Date(task.due).toLocaleDateString("en") : ""}</p>
+                        </div>}
+                    ></List>
+                  </li>
+              ))}</ol>}
           />
         </div>
         <div className={"w-1/2 h-full"}>
           <Content
               content_title={"バッテリを消費しないタスク"}
-              inner_content={<ol>{shared_state.length > 0 ? JSON.parse(shared_state).map((item, index) => (
-                    item.ignore ?
-                        <List
-                            icon={
-                              <IconButton
-                                  title={"バッテリを消費するタスクに変更"}
-                                  onClick={() => {
-                                    const updata_tasks = JSON.parse(shared_state);
-                                    for (const task of updata_tasks) {
-                                      if (task.id === item.id) task.ignore = false;
-                                    }
-                                    set_state(JSON.stringify(updata_tasks));
-                                  }}
-                              >
-                                {<Add />}
-                              </IconButton>
-                            }
-                            title={item.title}
-                            inner_content={
-                              <>
-                                <p>{item.notes}</p>
-                                <p>{item.due ? `Due @ ${new Date(item.due).toLocaleDateString("en")}` : ""}</p>
-                              </>
-                            }
-                            key={`not-use-battery-task-${index}`}
-                        /> : <></>
-                )) : <></>}
-              </ol>}
+              inner_content={<ol>{task_data.map((task: taskForm) => (
+                  task.ignore ? <li key={task.id}>
+                    <List
+                        icon={
+                          <IconButton>
+                            <Add/>
+                          </IconButton>
+                        }
+                        title={task.title}
+                        inner_content={<div>
+                          <p>{task.notes}</p>
+                          <p>{task.due ? "Due date: " + new Date(task.due).toLocaleDateString("en") : ""}</p>
+                        </div>}
+                    ></List>
+                  </li> : <></>
+              ))}</ol>}
           />
         </div>
       </div>

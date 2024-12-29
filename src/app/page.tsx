@@ -2,45 +2,48 @@
 
 import Section from "@/components/section";
 import Sidebar from "@/components/sidebar";
-import {section_names} from "@/datas";
-import {useEffect, useState} from "react";
+import {section_names, localstorage_data_names} from "@/datas";
 import useSWR from "swr";
+import {useEffect} from "react";
 import {taskForm} from "@/interfaces";
+import taskClassification from "@/lib/task-classification";
 
 export default function Home() {
-  const [task_data, setTaskData] = useState("");
   const {data} = useSWR('/api/tasks/?method=get', fetch, {
     refreshInterval: 1000 * 60,
   });
   useEffect(() => {
     if (data) {
+      const storedData = localStorage.getItem(localstorage_data_names.taskData);
+      const pastData: taskForm[] = storedData ? JSON.parse(storedData) : [];
       const formedData: taskForm[] = [];
-      const still_task_data = task_data.length > 0 ? JSON.parse(task_data) : "";
-      data.json().then(async (result) => {
-        if (result && result.content) {
-          for (const task of result.content) {
-            const is_use_battery_response = await fetch(`/api/tasks?method=classing&content=title:${task.title || ""}\nnotes:${task.notes || ""}`);
-            const is_use_battery_result = await is_use_battery_response.json();
-            if (still_task_data.length > 0) {
-              let already_got = false;
-              for (const std of still_task_data) {
-                if (std.id === task.id) already_got = true;
-              }
-              if (already_got) continue;
-            }
 
-            console.log("Pushed new data !");
+      data.json().then(async (result) => {
+        if (result && result?.content) {
+          for (const task of result.content) {
+            let is_already: boolean = false;
+            for (const past_task of pastData) {
+              if (is_already = task.id === past_task.id) {
+                formedData.push(past_task);
+                break;
+              }
+            }
+            if (is_already) continue;
+
+            const use_battery: boolean = await taskClassification({
+              type: "use-battery",
+              content: `title: ${task.title}\nnotes: ${task.notes}`
+            });
             formedData.push({
               title: task.title || "",
               notes: task.notes || "",
               due: task.due || "",
               id: task.id || "",
-              use_battery: is_use_battery_result.content,
-              ignore: !is_use_battery_result.content,
+              use_battery: use_battery,
+              ignore: !use_battery,
             });
           }
-          setTaskData(JSON.stringify(formedData))
-          console.log(result, formedData);
+          localStorage.setItem("task-data", JSON.stringify(formedData));
         }
       });
     }
@@ -51,7 +54,7 @@ export default function Home() {
         <Sidebar/>
         <div className={"w-full h-[calc(100vh*4)]"}>
           {section_names.map((section_name, index) => (
-              <Section section_name={section_name} key={index} shared_state={task_data} set_state={setTaskData}/>
+              <Section section_name={section_name} key={index}/>
           ))}
         </div>
       </main>
