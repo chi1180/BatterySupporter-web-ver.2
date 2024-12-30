@@ -5,7 +5,7 @@ export default function List({icon, title, inner_content}: listProps) {
       <div className={"w-full py-2"}>
         <details className={"w-full p-2 rounded-md border border-secondary-color"}>
           <summary className={"w-full h-12 pl-2 flex items-center"}>
-          <span className={"h-full aspect-square rounded-full relative flex items-center"}>
+          <span className={`${ icon ? "h-full" : ""} aspect-square rounded-full relative flex items-center`}>
             {icon}
           </span>
             <p className={"text-xl pl-1"}>{title}</p>

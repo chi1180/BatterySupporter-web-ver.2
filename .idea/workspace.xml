@@ -5,17 +5,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddae53db-81c6-49b5-95c9-fd381837d889" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/lib/task-classification.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/number-inp.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/switch-btn.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/check-battery-level.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/email-sender.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/notification-sender.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/setting-data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memo" beforeDir="false" afterPath="$PROJECT_DIR$/memo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memo" beforeDir="false" afterPath="$PROJECT_DIR$/memo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/about.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/add.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dashboard.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dro-up.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/drop-down.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/file.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/globe.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/help.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ignore.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/next.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/no-image.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/property-hovered.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/property.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/setting.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/task-list.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vercel.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/window.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/sign-in/[[...sign-in]]/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/sign-up/[[...sign-up]]/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/about.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/account.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/account.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/help.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/help.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/settings.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sidebar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/task-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/task-list.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/datas.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/datas.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/classing-tasks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/classing-tasks.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +71,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/app/page.tsx" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 0
@@ -48,21 +86,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\CWChi\\IdeaProjects\\battery-supporter-web-ver.2\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/CWChi/IdeaProjects/battery-supporter-web-ver.2/src/lib",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "discord-application",
+    "ts.external.directory.path": "C:\\Users\\CWChi\\IdeaProjects\\battery-supporter-web-ver.2\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\CWChi\IdeaProjects\battery-supporter-web-ver.2\src\lib" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -94,7 +140,10 @@
       <workItem from="1735433723969" duration="5884000" />
       <workItem from="1735452636046" duration="3578000" />
       <workItem from="1735456594381" duration="7439000" />
-      <workItem from="1735467856916" duration="1637000" />
+      <workItem from="1735467856916" duration="2463000" />
+      <workItem from="1735511998186" duration="12947000" />
+      <workItem from="1735525111041" duration="5172000" />
+      <workItem from="1735532533117" duration="23070000" />
     </task>
     <servers />
   </component>

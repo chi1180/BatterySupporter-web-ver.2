@@ -6,14 +6,14 @@ import Settings from "@/components/settings";
 import Help from "@/components/help";
 import About from "@/components/about";
 
-export default function Section({section_name, shared_state, set_state}: sectionProps) {
+export default function Section({section_name}: sectionProps) {
   let inner_content: ReactNode;
   switch (section_name) {
     case "dashboard":
-      inner_content = <Dashboard shared_state={shared_state} set_state={set_state} section_name={undefined}/>;
+      inner_content = <Dashboard/>;
       break;
     case "task list":
-      inner_content = <TaskList shared_state={shared_state} set_state={set_state} section_name={undefined}/>;
+      inner_content = <TaskList/>;
       break;
     case "settings":
       inner_content = <Settings/>;
@@ -25,7 +25,7 @@ export default function Section({section_name, shared_state, set_state}: section
       inner_content = <About/>;
       break;
     default:
-      inner_content = <Dashboard shared_state={shared_state} set_state={set_state} section_name={undefined}/>;
+      inner_content = <Dashboard/>;
   }
 
   return (

@@ -2,6 +2,7 @@
 
 import {SignedIn, SignedOut, UserButton, useUser, useClerk } from "@clerk/nextjs";
 import List from "@/components/list";
+import {Button} from "@mui/material";
 
 export default function Account() {
   const user = useUser();
@@ -26,13 +27,13 @@ export default function Account() {
         </SignedIn>
 
         <SignedOut>
-          <button
-              className={"w-32 h-14 rounded-md bg-secondary-color flex flex-col items-center justify-center"}
+          <Button
+              variant={"contained"}
+              color={"inherit"}
               onClick={() => openSignIn()}
           >
-            <p className={"text-xl"}>Sign in</p>
-            <p className={"text-xs"}>with Google</p>
-          </button>
+            <p>Sign in</p>
+          </Button>
         </SignedOut>
       </div>
   );

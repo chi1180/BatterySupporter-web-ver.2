@@ -11,7 +11,7 @@ export default {
       textColor: {
         "main-color": "#000000",
         "secondary-color": "#ffffff",
-        "link-color": "#452828",
+        "link-color": "#3e3e8d",
       },
       backgroundColor: {
         "main-color": "#ffffff",

@@ -1,0 +1,31 @@
+<<--- 実装中の適当メモ --->>
+
+# API と task-list section & dashboard の connection について
+
+- SWR で定期手ににデータの取得
+- ignore 等々の管理のために、 fetch したデータは整形して state へ保存
+- | length の変化など見受けられれば、state へ新しいデータを整形して保存
++- root page で state を宣言して共有 or localstorage の使用を検討
+
+- reload したらデータが飛ぶので localstorage に保存するべきである。
+
+
+
+- useSWR で定期的にデータ取ってくる（from google tasks）
+|
+- data を format （same type of data）
+- localstorage のデータとの差異を確認
+|
+- different だったら updata して
+
+
+- google task は id のみで新しく追加すべきかどうか判断すると、既存のタスクに変更があった場合アップデートできない。
+| - last_edited_date property を追加して、そちらでも判別を行う。
+- 新しく property を追加するのは面倒なので、ユーザが編集できる箇所（title, notes, due）に差異があるかで判定することにした。（可読性はごみになった）
+| - わざわざ変更されたか確認戦でも撮ってきたデータをそのまま save すりゃい言って話になった。
+
+- settings data の扱いについて
+|
+- localStorage で管理
+- 初回はデータが保存されていないのでその対応コードを記載
+- update function を lib に作成。

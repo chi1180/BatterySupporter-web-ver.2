@@ -13,9 +13,17 @@ export interface contentProps {
 }
 
 export interface listProps {
-  icon: ReactNode;
+  icon: ReactNode | null;
   title: string;
   inner_content: ReactNode | undefined;
+}
+
+export interface switchBtnProps {
+  property: "process_status" | "start_on_sign_in" | "minimize_in_system_try" | "notify_battery_insufficient";
+}
+
+export interface numberInpProps {
+  property: "task_count" | "battery_level";
 }
 
 
@@ -35,3 +43,17 @@ export interface taskClassificationProps {
   content: string;
 }
 
+export interface settingsProps {
+  process_status: boolean;
+  start_on_sign_in: boolean;
+  minimize_in_system_try: boolean;
+  notify_battery_insufficient: boolean;
+  task_count: number;
+  battery_level: number;
+}
+
+export interface batteryStatusProps {
+  supports: boolean;
+  charging: boolean;
+  level: number;
+}
