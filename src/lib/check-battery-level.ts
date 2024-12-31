@@ -1,6 +1,6 @@
 import {batteryStatusProps} from "@/interfaces";
 
-export default async function checkBatteryLevel(): batteryStatusProps {
+export default async function checkBatteryLevel(): Promise<batteryStatusProps> {
   const res: batteryStatusProps = {
     supports: false,
     charging: false,
