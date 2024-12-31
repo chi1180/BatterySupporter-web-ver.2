@@ -99,7 +99,7 @@ export default function Home() {
             if (task.use_battery) tasks += `- ${task.title}\n`;
           });
         }
-        notificationSender(`バッテリの残量が十分でありません！デバイスの仕様を控えるか、充電することをお勧めします！\n今後のタスク:${tasks}`);
+        notificationSender(`バッテリの残量が十分でありません！デバイスの使用を控えるか、充電することをお勧めします！\n今後のタスク:${tasks}`);
       }
     })
   }
