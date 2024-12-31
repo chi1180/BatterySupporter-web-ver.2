@@ -10,4 +10,3 @@ export default function emailSender(message: string) {
   });
 }
 
-// TODO new environment variable added so add they when deploy on vercel

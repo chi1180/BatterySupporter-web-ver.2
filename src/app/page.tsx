@@ -82,15 +82,16 @@ export default function Home() {
         JSON.parse(storedTask).forEach((task: taskForm) => {
           if (task.use_battery) all_task ++;
         });
-        console.log(process_status, notify_battery_insufficient, res.level, battery_level, all_task, task_count);
-        return (process_status && notify_battery_insufficient && res.level <= battery_level && all_task >= task_count);
+        console.log(process_status, notify_battery_insufficient, res.level * 100, battery_level, all_task, task_count);
+        return (process_status && notify_battery_insufficient && res.level * 100 <= battery_level && all_task >= task_count);
       }
     }
   }
 
-  useEffect(() => {
-    const timer = setInterval(() => checkDeviceStatus().then(res => {
+  const alertFunc = () => {
+    checkDeviceStatus().then(res => {
       if (res) {
+        console.log("checkDeviceStatus()'s response is: ",res);
         const storedTask = localStorage.getItem(localstorage_data_names.taskData);
         let tasks = "\n";
         if (storedTask) {
@@ -100,7 +101,13 @@ export default function Home() {
         }
         notificationSender(`バッテリの残量が十分でありません！デバイスの仕様を控えるか、充電することをお勧めします！\n今後のタスク:${tasks}`);
       }
-    }), 1000 * 30);
+    })
+  }
+
+  useEffect(() => {
+    alertFunc();  // run at first of rendering.
+
+    const timer = setInterval(() => alertFunc(), 1000 * 60);
     return () => clearInterval(timer);
   }, []);
 
