@@ -7,9 +7,18 @@ export default async function checkBatteryLevel(): Promise<batteryStatusProps> {
     level: 0,
   }
 
-  if ("getBattery" in navigator && typeof window !== "undefined") {
+  interface NavigatorWithBattery extends Navigator {
+    getBattery?: () => Promise<{
+      charging: boolean;
+      level: number;
+    }>;
+  }
+
+  const nav = navigator as NavigatorWithBattery;
+
+  if (nav.getBattery && typeof window !== "undefined") {
     res.supports = true;
-    const battery = await navigator.getBattery();
+    const battery = await nav.getBattery();
     res.charging = battery.charging;
     res.level = battery.level;
 
