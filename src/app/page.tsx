@@ -105,7 +105,7 @@ export default function Home() {
   }
 
   useEffect(() => {
-    alertFunc();  // run at first of rendering.
+    // alertFunc();  // run at first of rendering.
 
     const timer = setInterval(() => alertFunc(), 1000 * 60);
     return () => clearInterval(timer);
