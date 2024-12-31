@@ -4,8 +4,8 @@ import {ClerkProvider} from "@clerk/nextjs";
 import {ReactNode} from "react";
 
 export const metadata: Metadata = {
-  title: "PowerForecast web",
-  description: "PowerForecast web",
+  title: "BatterySupporter web",
+  description: "BatterySupporter web",
 };
 
 export default function RootLayout({children}: Readonly<{
