@@ -19,8 +19,8 @@ export default function About() {
                 content_title={"Links"}
                 inner_content={
                   <ol className={"w-full h-full pl-4 *:text-link-color *:block *:w-fit"}>
-                    <Link href={""} target={"_blank"} className={"hover:font-bold"}>Web site</Link>
-                    <Link href={""} target={"_blank"} className={"hover:font-bold"}>Documentation</Link>
+                    <Link href={"https://chi1180.github.io/BatterySupporter-homepage/"} target={"_blank"} className={"hover:font-bold"}>Web site</Link>
+                    <Link href={"https://chi1180.github.io/BatterySupporter-documentation/starter.html"} target={"_blank"} className={"hover:font-bold"}>Documentation</Link>
                   </ol>
                 }/>
           </div>
