@@ -14,7 +14,7 @@ export default function About() {
               <div className={"w-full h-full"}>
                 <List
                   icon={null}
-                  title={"Current version : 1.0.0"}
+                  title={`Current version : ${AppInfo.current_version}`}
                   inner_content={null}
                 />
                 <List
