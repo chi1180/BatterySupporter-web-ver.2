@@ -1,7 +1,6 @@
 /* << Components interfaces /> */
 
-
-import {ReactNode} from "react";
+import { ReactNode } from "react";
 
 export interface sectionProps {
   section_name: string | undefined;
@@ -19,13 +18,16 @@ export interface listProps {
 }
 
 export interface switchBtnProps {
-  property: "process_status" | "start_on_sign_in" | "minimize_in_system_try" | "notify_battery_insufficient";
+  property:
+    | "process_status"
+    | "start_on_sign_in"
+    | "minimize_in_system_try"
+    | "notify_battery_insufficient";
 }
 
 export interface numberInpProps {
   property: "task_count" | "battery_level";
 }
-
 
 /* << Libs interfaces /> */
 
@@ -50,10 +52,28 @@ export interface settingsProps {
   notify_battery_insufficient: boolean;
   task_count: number;
   battery_level: number;
+  insufficient: boolean;
 }
+
+export type settingPropertyNames =
+  | "process_status"
+  | "start_on_sign_in"
+  | "minimize_in_system_try"
+  | "notify_battery_insufficient"
+  | "task_count"
+  | "battery_level"
+  | "insufficient";
 
 export interface batteryStatusProps {
   supports: boolean;
   charging: boolean;
   level: number;
+}
+
+declare global {
+  interface Window {
+    electron?: {
+      isElectron: boolean;
+    };
+  }
 }

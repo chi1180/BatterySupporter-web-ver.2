@@ -29,3 +29,34 @@
 - localStorage で管理
 - 初回はデータが保存されていないのでその対応コードを記載
 - update function を lib に作成。
+
+
+< -- 関数の分散化のためのメモ -- >
+
+reguraly {
+  if (process_status) {
+    check google tasks data
+    if (is_new_task) check is?task_use_battery
+
+    check is_insufficient
+    if (is_insufficient) {
+      show_alert_message(in task-list)
+      if (show_notification) show alert notification at desktop
+    }
+  }
+}
+
+
+< --- Release info --- >
+
+< Second release />
+- メジャーバージョン
+
+- マイナーバージョン
+バッテリの残量が不足していると判断されたら、「監視中のタスク」に警告を表示する機能を追加
+「バッテリの残量不足を通知」がONにされたとき、通知リクエストに対しての操作が行われていない場合、通知の許可を求めるように実装
+- バッチバージョン
+web 版での「起動設定」の非表示を実装
+「監視のON/OFF」がONの場合、GoogleTasks から定期的にタスクを取得し、バッテリの残量が不足しているか監視するように機能変更
+「Release data」の日付表記をアメリカ式に変更
+関数の細分化

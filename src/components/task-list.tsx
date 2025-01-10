@@ -2,11 +2,11 @@
 
 import Content from "@/components/content";
 import List from "@/components/list";
-import {localstorage_data_names} from "@/datas";
-import {useEffect, useState} from "react";
-import {Add, Block} from "@mui/icons-material";
-import {taskForm} from "@/interfaces";
-import {IconButton} from "@mui/material";
+import { localstorage_data_names } from "@/data";
+import { useEffect, useState } from "react";
+import { Add, Block } from "@mui/icons-material";
+import { taskForm } from "@/interfaces";
+import { IconButton } from "@mui/material";
 
 export default function TaskList() {
   const [task_data, setTaskData] = useState([]);
@@ -21,10 +21,8 @@ export default function TaskList() {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    updateTaskData();
-
-    const timer = setInterval(updateTaskData, 1000);  // set interval
-    return () => clearInterval(timer);  // return clean up function
+    const timer = setInterval(() => updateTaskData(), 1000);
+    return () => clearInterval(timer);
   }, []);
 
   function toggleIgnoreStatus(task_id: string) {
@@ -43,44 +41,64 @@ export default function TaskList() {
 
   function taskDetailComponent(task: taskForm) {
     return (
-        <List
-            icon={
-              <IconButton
-                  title={task.ignore ? "バッテリを消費するタスクに変更" : "バッテリを消費しないタスクに変更"}
-                  onClick={() => toggleIgnoreStatus(task.id)}
-              >{
-                task.ignore ? <Add/> : <Block/>
-              }</IconButton>
+      <List
+        icon={
+          <IconButton
+            title={
+              task.ignore
+                ? "バッテリを消費するタスクに変更"
+                : "バッテリを消費しないタスクに変更"
             }
-            title={task.title}
-            inner_content={
-              <div>
-                <p>{task.notes}</p>
-                <p>{task.due ? "Due date: " + new Date(task.due).toLocaleDateString("en") : ""}</p>
-              </div>
-            }>
-        </List>
+            onClick={() => toggleIgnoreStatus(task.id)}
+          >
+            {task.ignore ? <Add /> : <Block />}
+          </IconButton>
+        }
+        title={task.title}
+        inner_content={
+          <div>
+            <p>{task.notes}</p>
+            <p className={task.due ? "pt-3" : ""}>
+              {task.due
+                ? "Due date : " + new Date(task.due).toLocaleDateString("en")
+                : ""}
+            </p>
+          </div>
+        }
+      ></List>
     );
   }
 
   return (
-      <div className={"w-full h-full flex"}>
-        <div className={"w-1/2 h-full"}>
-          <Content
-              content_title={"バッテリを消費するタスク"}
-              inner_content={<ol className={"w-full h-full overflow-y-scroll"}>{task_data.map((task: taskForm) => (
-                  <li key={task.id}>{task.ignore ? <></> : taskDetailComponent(task)}</li>
-              ))}</ol>}
-          />
-        </div>
-        <div className={"w-1/2 h-full"}>
-          <Content
-              content_title={"バッテリを消費しないタスク"}
-              inner_content={<ol className={"w-full h-full overflow-y-scroll"}>{task_data.map((task: taskForm) => (
-                  <li key={task.id}>{task.ignore ? taskDetailComponent(task) : <></>}</li>
-              ))}</ol>}
-          />
-        </div>
+    <div className={"w-full h-full flex"}>
+      <div className={"w-1/2 h-full"}>
+        <Content
+          content_title={"バッテリを消費するタスク"}
+          inner_content={
+            <ol className={"w-full h-full overflow-y-scroll"}>
+              {task_data.map((task: taskForm) => (
+                <li key={task.id}>
+                  {task.ignore ? <></> : taskDetailComponent(task)}
+                </li>
+              ))}
+            </ol>
+          }
+        />
       </div>
+      <div className={"w-1/2 h-full"}>
+        <Content
+          content_title={"バッテリを消費しないタスク"}
+          inner_content={
+            <ol className={"w-full h-full overflow-y-scroll"}>
+              {task_data.map((task: taskForm) => (
+                <li key={task.id}>
+                  {task.ignore ? taskDetailComponent(task) : <></>}
+                </li>
+              ))}
+            </ol>
+          }
+        />
+      </div>
+    </div>
   );
 }
