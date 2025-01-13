@@ -24,9 +24,14 @@ export const standardSettingData: settingsProps = {
 };
 
 export const AppInfo = {
-  current_version: "1.1.1",
-  release_date: "01/10/2025",
-  release_note: `= 1.1.1 =
+  current_version: "1.2.2",
+  release_date: "01/13/2025",
+  release_note: `= 1.2.2 =
+  利用規約とプライバシーポリシーポリシーを追加
+  フィードバックフォームの入力項目に枠線を表示
+  フィードバックフォームの入寮必須項目に"（必須）"を表記
+
+= 1.1.1 =
   [監視中のタスク]にバッテリ残量不足の警告を表示する機能を追加
   [バッテリの残量不足を通知]がONにされたら、通知リクエストを送信する機能を追加
   Web版での[起動設定]の非表示を実装

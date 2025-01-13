@@ -2,6 +2,7 @@ import Content from "@/components/content";
 import Link from "next/link";
 import List from "@/components/list";
 import { AppInfo } from "@/data";
+import LinkList from "./link-list";
 
 export default function About() {
   return (
@@ -35,22 +36,7 @@ export default function About() {
                   "w-full h-full pl-4 *:text-link-color *:block *:w-fit"
                 }
               >
-                <Link
-                  href={"https://chi1180.github.io/BatterySupporter-homepage/"}
-                  target={"_blank"}
-                  className={"hover:font-bold"}
-                >
-                  Web site
-                </Link>
-                <Link
-                  href={
-                    "https://chi1180.github.io/BatterySupporter-documentation/starter.html"
-                  }
-                  target={"_blank"}
-                  className={"hover:font-bold"}
-                >
-                  Documentation
-                </Link>
+                <LinkList />
               </ol>
             }
           />
