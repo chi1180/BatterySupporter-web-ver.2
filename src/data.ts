@@ -24,7 +24,7 @@ export const standardSettingData: settingsProps = {
 };
 
 export const AppInfo = {
-  current_version: "1.2.2",
+  current_version: "1.3.1",
   release_date: "01/13/2025",
   release_note: `= 1.3.1 =
   利用規約、プライバシーポリシをアプリ内のページに作成
