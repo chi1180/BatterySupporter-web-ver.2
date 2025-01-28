@@ -1,6 +1,6 @@
 export default function notificationSender(message: string, against?: boolean) {
   if ("Notification" in window && Notification.permission === "granted")
-    new Notification(message, { icon: "./favicon.ico" });
+    new Notification(message, { icon: "./favicon.ico", body: message });
   else if (!against)
     requestNotification()?.then(() => notificationSender(message, true));
 }

@@ -34,7 +34,9 @@ export default function Dashboard() {
         <Content
           content_title={"監視中のタスク"}
           inner_content={
-            <ol className={insufficient ? "insufficient" : ""}>
+            <ol
+              className={`${insufficient ? "insufficient" : ""} overflow-y-scroll`}
+            >
               <li
                 className={`${insufficient ? "" : "hidden"} px-2 py-4 rounded-md bg-accent-color bg-opacity-80`}
               >

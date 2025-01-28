@@ -26,7 +26,11 @@ export const standardSettingData: settingsProps = {
 export const AppInfo = {
   current_version: "1.2.2",
   release_date: "01/13/2025",
-  release_note: `= 1.2.2 =
+  release_note: `= 1.3.1 =
+  利用規約、プライバシーポリシをアプリ内のページに作成
+  Dashboardの「監視中のタスク」をスクロール可能に機能変更
+
+= 1.2.2 =
   利用規約とプライバシーポリシーポリシーを追加
   フィードバックフォームの入力項目に枠線を表示
   フィードバックフォームの入寮必須項目に"（必須）"を表記

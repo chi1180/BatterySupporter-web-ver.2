@@ -27,7 +27,8 @@ export default function reguralyFunc() {
             });
           }
           notificationSender(
-            `バッテリの残量が十分でありません！デバイスの使用を控えるか、充電することをお勧めします！\n< 今後のタスク />\n${tasks}`,
+            "バッテリの残量が十分でありません！\n\nデバイスの使用を控えるか、充電することをお勧めします！\n\n< 今後のタスク />\n" +
+              tasks,
           );
         }
       }

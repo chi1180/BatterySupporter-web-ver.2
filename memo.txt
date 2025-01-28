@@ -47,6 +47,13 @@ reguraly {
 }
 
 
+< --- Check contents when released new --- >
+
+- Check with privacy policy and user agreement.
+- If need change then changed -> Set notify new.
+
+
+
 < --- Release info --- >
 
 < Second release />
@@ -69,3 +76,12 @@ web 版での「起動設定」の非表示を実装
 - バッチバージョン
 フィードバックフォームの入力項目に枠線を表示
 フィードバックフォームの入寮必須項目に"（必須）"を表記
+
+< 4th release />
+- メジャーバージョン
+
+- マイナーバージョン
+
+- バッチバージョン
+Dashboardの「監視中のタスク」をスクロール可能に機能変更
+利用規約、プライバシーポリシをアプリ内のページに移動

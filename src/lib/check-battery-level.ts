@@ -1,11 +1,11 @@
-import {batteryStatusProps} from "@/interfaces";
+import { batteryStatusProps } from "@/interfaces";
 
 export default async function checkBatteryLevel(): Promise<batteryStatusProps> {
   const res: batteryStatusProps = {
     supports: false,
     charging: false,
     level: 0,
-  }
+  };
 
   interface NavigatorWithBattery extends Navigator {
     getBattery?: () => Promise<{
@@ -21,10 +21,7 @@ export default async function checkBatteryLevel(): Promise<batteryStatusProps> {
     const battery = await nav.getBattery();
     res.charging = battery.charging;
     res.level = battery.level;
-
-    console.log(`Battery level: ${battery.level}`);
   }
 
   return res;
 }
-
