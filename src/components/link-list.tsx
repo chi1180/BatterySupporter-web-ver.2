@@ -4,7 +4,7 @@ export default function LinkList() {
   return (
     <>
       <Link
-        href={"https://chi1180.github.io/BatterySupporter-homepage/"}
+        href={"https://battery-supporter-homepage.vercel.app/"}
         target={"_blank"}
         className={"hover:font-bold"}
       >

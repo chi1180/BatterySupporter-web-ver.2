@@ -24,16 +24,21 @@ export const standardSettingData: settingsProps = {
 };
 
 export const AppInfo = {
-  current_version: "1.3.1",
-  release_date: "01/13/2025",
-  release_note: `= 1.3.1 =
+  current_version: "1.4.3",
+  release_date: "01/31/2025",
+  release_note: `=1.4.3=
+  ホームページをリニューアル
+  Push通知のメッセージスタイルを改善
+  Release noteのtypoを修正
+
+= 1.3.1 =
   利用規約、プライバシーポリシをアプリ内のページに作成
   Dashboardの「監視中のタスク」をスクロール可能に機能変更
 
 = 1.2.2 =
   利用規約とプライバシーポリシーポリシーを追加
   フィードバックフォームの入力項目に枠線を表示
-  フィードバックフォームの入寮必須項目に"（必須）"を表記
+  フィードバックフォームの入力必須項目に"（必須）"を表記
 
 = 1.1.1 =
   [監視中のタスク]にバッテリ残量不足の警告を表示する機能を追加

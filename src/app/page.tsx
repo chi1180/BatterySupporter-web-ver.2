@@ -4,12 +4,12 @@ import Section from "@/components/section";
 import Sidebar from "@/components/sidebar";
 import { section_names } from "@/data";
 import { useEffect } from "react";
-import reguralyFunc from "@/lib/reguraly-func";
+import regularlyFunc from "@/lib/regularly-func";
 
 export default function Home() {
   useEffect(() => {
-    reguralyFunc();
-    const timer = setInterval(() => reguralyFunc(), 1000 * 60);
+    regularlyFunc();
+    const timer = setInterval(() => regularlyFunc(), 1000 * 60);
     return () => clearInterval(timer);
   }, []);
 

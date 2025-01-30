@@ -2,7 +2,7 @@ import { localstorage_data_names } from "@/data";
 import { taskForm } from "@/interfaces";
 import taskClassification from "./task-classification";
 
-export default async function updataGoogleTasks() {
+export default async function updateGoogleTasks() {
   const taskFetchData = await fetch("/api/tasks/?method=get");
   if (taskFetchData) {
     const storedData = localStorage.getItem(localstorage_data_names.taskData);

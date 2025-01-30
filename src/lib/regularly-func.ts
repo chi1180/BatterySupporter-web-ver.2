@@ -1,14 +1,14 @@
 import { changeProperty, getProperty } from "./setting-data";
-import updataGoogleTasks from "./updata-google-tasks";
+import updateGoogleTasks from "./update-google-tasks";
 import checkInsufficient from "./check-insufficient";
 import { localstorage_data_names } from "@/data";
 import notificationSender from "./notification-sender";
 import { taskForm } from "@/interfaces";
 
-export default function reguralyFunc() {
+export default function regularlyFunc() {
   const process_status = getProperty("process_status");
   if (process_status) {
-    updataGoogleTasks();
+    updateGoogleTasks();
     checkInsufficient().then((res) => {
       changeProperty("insufficient", res as boolean);
       console.log("Insufficient: ", res, res as boolean);
@@ -23,12 +23,12 @@ export default function reguralyFunc() {
           );
           if (storedTask) {
             JSON.parse(storedTask).forEach((task: taskForm) => {
-              if (task.use_battery) tasks += `- ${task.title}\n`;
+              if (task.use_battery) tasks += `- ${task.title}\r\n`;
             });
           }
           notificationSender(
-            "バッテリの残量が十分でありません！\n\nデバイスの使用を控えるか、充電することをお勧めします！\n\n< 今後のタスク />\n" +
-              tasks,
+            "バッテリの残量が十分でありません！",
+            `デバイスの使用を控えるか、充電することをお勧めします！\r\n#今後のタスク#\r\n${tasks}`,
           );
         }
       }
